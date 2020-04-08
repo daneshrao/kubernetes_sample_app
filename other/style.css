@@ -1,0 +1,38 @@
+body{
+    color: #515253fa;
+    background-color: #efefef;
+}
+.system-basic-info{
+    padding: 0.4rem;
+}
+.server-running-status{
+    height: 20px;
+    width: 20px;
+    background-color: #28a745;
+    border-radius: 50%;
+}
+.server-stopped-status{
+    height: 20px;
+    width: 20px;
+    background-color: #dc3545;
+    border-radius: 50%;
+}
+.system-process-info{
+    padding: 0.4rem;
+}
+.card-bg-success{
+    background-color: #d4edda;
+    color: #155724;
+}
+.card-bg-danger{
+    background-color: #f8d7da;
+    color: #721c24;
+}
+.card-bg-info{
+    background-color: #d1ecf1;
+    color: #0c5460;
+}
+.card-bg-warning{
+    background-color: #fff3cd;
+    color: #856404;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  * {
+    font-family: sans-serif; /* Change your font family */
+  }
+
+  .content-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    verflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .content-table tr td:first-letter{
+   text-transform:capitalize;
+  }
+  .content-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+  }
+
+  .content-table th{
+    padding: 12px 15px;
+    text-transform: capitalize;
+  }
+  .content-table td {
+    padding: 12px 15px;
+  }
+
+  .content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+  }
+
+  .content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+  }
+
+  .content-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+  }
+
+</style>
+</head>
+<body>
+
+<h2> Machine: {{ ip }} </h2>
+
+{% for resp_iter in values %}
+{% set count = 1 %}
+<table class="content-table">
+<h3>{{ resp_iter }}</h3>
+<tr>
+{% for li in values[resp_iter] %}
+    {% for val in li %}
+        {% if count == 0 %}
+            <th> {{ val }} </th>
+        {% else %}
+            <td> {{ val }} </td>
+        {% endif %}
+    {% endfor %}
+    {% set count = count + 1 %}
+</tr>
+
+{% endfor %}
+</table>
+{% endfor %}
+
+
+
+
+</body>
+</html>
